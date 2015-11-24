@@ -1,51 +1,34 @@
-<?php
-/**
- * The main template file
- *
- * This is the most generic template file in a WordPress theme
- * and one of the two required files for a theme (the other being style.css).
- * It is used to display a page when nothing more specific matches a query.
- * e.g., it puts together the home page when no home.php file exists.
- *
- * Learn more: {@link https://codex.wordpress.org/Template_Hierarchy}
- *
- * @package WordPress
- * @subpackage FoundationPress
- * @since FoundationPress 1.0.0
- */
 
-get_header(); ?>
+<?php get_header();>
 
-<div class="row">
-	<?php get_template_part( 'parts/check-if-sidebar-exist' ); ?>
+	<img src=""><!-- IMAGE COIN IMAGE GRIS OMBRE-->
+	<main><!-- CONTENU FOND BLANC-->
 
-	<?php if ( have_posts() ) : ?>
+		<aside>
+			<?php get_sidebar(); ?>
+		</aside><!-- ASIDE -->
 
-		<?php do_action( 'foundationpress_before_content' ); ?>
+		<section><!-- LISTE D'ARTICLES-->
+			<hr/>
+			<article id="article1"><!-- ARTICLE MIS EN AVANT-->
+				<h3>Catégorie</h3>
+				<time>21/09/12</time>
+				<h3 id="titre1">TITRE DE L'ARTICLE</h3>
+				<article></article><!-- MEDIA : SLIDER-->
+				<P>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi sequi rerum, omnis nostrum aspernatur soluta vero neque, impedit cupiditate officiis aliquam, ipsa, in ex. Natus hic voluptate, alias doloribus molestiae.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi sequi rerum, omnis nostrum aspernatur soluta vero neque, impedit cupiditate officiis aliquam, ipsa, in ex. Natus hic voluptate, alias doloribus molestiae.</P>
+				<!-- PLUG-IN RÉSEAUX SOCIAUX-->
+			</article>
 
-		<?php while ( have_posts() ) : the_post(); ?>
-			<?php get_template_part( 'content', get_post_format() ); ?>
-		<?php endwhile; ?>
+			<article class="articles">
+				<h3>Catégorie</h3>
+				<time>21/09/12</time>
+				<article></article><!-- MEDIA-->
+				<h3>titre de l'article</h3>
+				<P>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi sequi rerum, omnis nostrum aspernatur soluta vero neque, impedit cupiditate officiis aliquam, ipsa, in ex. Natus hic voluptate, alias doloribus molestiae.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi sequi rerum, omnis nostrum aspernatur soluta vero neque, impedit cupiditate officiis aliquam, ipsa, in ex. Natus hic voluptate, alias doloribus molestiae.</P>
+				<!-- PLUG-IN RÉSEAUX SOCIAUX-->
+			</article>
 
-		<?php else : ?>
-			<?php get_template_part( 'content', 'none' ); ?>
-
-		<?php do_action( 'foundationpress_before_pagination' ); ?>
-
-	<?php endif;?>
-
-
-
-	<?php if ( function_exists( 'foundationpress_pagination' ) ) { foundationpress_pagination(); } else if ( is_paged() ) { ?>
-		<nav id="post-nav">
-			<div class="post-previous"><?php next_posts_link( __( '&larr; Older posts', 'foundationpress' ) ); ?></div>
-			<div class="post-next"><?php previous_posts_link( __( 'Newer posts &rarr;', 'foundationpress' ) ); ?></div>
-		</nav>
-	<?php } ?>
-
-	<?php do_action( 'foundationpress_after_content' ); ?>
-
-	</div>
-	<?php get_sidebar(); ?>
-</div>
-<?php get_footer(); ?>
+			<!-- PAGINATION-->
+		</section>
+	</main>
+<?php get_footer();

@@ -1,38 +1,29 @@
-<?php
-/**
- * The template for displaying the footer
- *
- * Contains the closing of the "off-canvas-wrap" div and all content after.
- *
- * @package WordPress
- * @subpackage FoundationPress
- * @since FoundationPress 1.0.0
- */
+<footer><!-- FOOTER -->
+	<section>
+		<article id="module1"><!-- WIDGET FOOTER 1-->
+			<h5>À propos des trophées de l’eau</h5>
+			<p>Vous avez réalisé une action singulière de reconquête ou de préservation de la ressource en eau, des milieux aquatiques et de leurs usages. Cette action est aujourd’hui terminée. Vous avez obtenu des résultats concrets que vous souhaitez valoriser. <a href="#">Postulez aux Trophées de l’eau 2010</a> et votre action aura valeur d’exemple.</p>
+		</article>
 
-?>
-
-</section>
-<div id="footer-container">
-	<footer id="footer">
-		<?php do_action( 'foundationpress_before_footer' ); ?>
-		<?php dynamic_sidebar( 'footer-widgets' ); ?>
-		<?php do_action( 'foundationpress_after_footer' ); ?>
-	</footer>
-</div>
-
-<?php if ( ! get_theme_mod( 'wpt_mobile_menu_layout' ) || get_theme_mod( 'wpt_mobile_menu_layout' ) == 'offcanvas' ) : ?>
-
-<a class="exit-off-canvas"></a>
-<?php endif; ?>
-
-	<?php do_action( 'foundationpress_layout_end' ); ?>
-
-<?php if ( ! get_theme_mod( 'wpt_mobile_menu_layout' ) || get_theme_mod( 'wpt_mobile_menu_layout' ) == 'offcanvas' ) : ?>
-	</div>
-</div>
-<?php endif; ?>
-
-<?php wp_footer(); ?>
-<?php do_action( 'foundationpress_before_closing_body' ); ?>
+		<article id="module2"><!-- WIDGET FOOTER 2-->
+			<ul>
+				<li><a href="#">Le concours</a></li>
+				<li><a href="#">Règlements</a></li>
+				<li><a href="#">Dossier d'inscription</a></li>
+				<li><a href="#">Calendrier</a></li>
+				<li><a href="#">Contacts</a></li>
+				<li><a href="#">Éditions précédentes</a></li>
+				<li><a href="#"></a></li>
+			</ul>
+		</article>
+		<article id="module3"><!-- WIDGET FOOTER 3-->
+			<img src="">
+		</article>
+		<section><!-- FOOTER -->
+			<p><a>Mentions légales</a> - Les Trophées de l’eau 2011 - Réalisation : Maetva Planet</p>
+		</section>
+	</section>
+	<?php wp_footer(); ?>
+</footer>
 </body>
 </html>
