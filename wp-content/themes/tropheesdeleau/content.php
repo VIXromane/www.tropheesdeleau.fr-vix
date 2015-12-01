@@ -1,26 +1,19 @@
-<?php
-/**
- * The default template for displaying content
- *
- * Used for both single and index/archive/search.
- *
- * @package WordPress
- * @subpackage FoundationPress
- * @since FoundationPress 1.0.0
- */
+<section><!-- LISTE D'ARTICLES-->
+	<hr/>
+	<article id="article1"><!-- ARTICLE MIS EN AVANT-->
+		<h3>Catégorie</h3>
+		<time><?php the_date(); ?></time>
+		<h3 id="titre1"><?php the_title(); ?></h3>
+		<article></article><!-- MEDIA : SLIDER-->
+		<P><?php the_content(); ?></P>
+		<!-- PLUG-IN RÉSEAUX SOCIAUX-->
+	</article>
 
-?>
-
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header>
-		<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-		<?php foundationpress_entry_meta(); ?>
-	</header>
-	<div class="entry-content">
-		<?php the_content( __( 'Continue reading...', 'foundationpress' ) ); ?>
-	</div>
-	<footer>
-		<?php $tag = get_the_tags(); if ( $tag ) { ?><p><?php the_tags(); ?></p><?php } ?>
-	</footer>
-	<hr />
-</article>
+	<article class="articles">
+		<h3>Catégorie</h3>
+		<time><?php the_date(); ?></time>
+		<article></article><!-- MEDIA-->
+		<h3><?php the_title(); ?></h3>
+		<P><?php the_content(); ?></P>
+		<!-- PLUG-IN RÉSEAUX SOCIAUX-->
+	</article>

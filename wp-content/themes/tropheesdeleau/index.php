@@ -1,5 +1,5 @@
 
-<?php get_header();>
+<?php get_header(); ?>
 
 	<img src=""><!-- IMAGE COIN IMAGE GRIS OMBRE-->
 	<main><!-- CONTENU FOND BLANC-->
@@ -8,27 +8,27 @@
 			<?php get_sidebar(); ?>
 		</aside><!-- ASIDE -->
 
-		<section><!-- LISTE D'ARTICLES-->
-			<hr/>
-			<article id="article1"><!-- ARTICLE MIS EN AVANT-->
-				<h3>Catégorie</h3>
-				<time>21/09/12</time>
-				<h3 id="titre1">TITRE DE L'ARTICLE</h3>
-				<article></article><!-- MEDIA : SLIDER-->
-				<P>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi sequi rerum, omnis nostrum aspernatur soluta vero neque, impedit cupiditate officiis aliquam, ipsa, in ex. Natus hic voluptate, alias doloribus molestiae.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi sequi rerum, omnis nostrum aspernatur soluta vero neque, impedit cupiditate officiis aliquam, ipsa, in ex. Natus hic voluptate, alias doloribus molestiae.</P>
-				<!-- PLUG-IN RÉSEAUX SOCIAUX-->
-			</article>
+		<?php if (have_posts()) : ?>
 
-			<article class="articles">
-				<h3>Catégorie</h3>
-				<time>21/09/12</time>
-				<article></article><!-- MEDIA-->
-				<h3>titre de l'article</h3>
-				<P>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi sequi rerum, omnis nostrum aspernatur soluta vero neque, impedit cupiditate officiis aliquam, ipsa, in ex. Natus hic voluptate, alias doloribus molestiae.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi sequi rerum, omnis nostrum aspernatur soluta vero neque, impedit cupiditate officiis aliquam, ipsa, in ex. Natus hic voluptate, alias doloribus molestiae.</P>
-				<!-- PLUG-IN RÉSEAUX SOCIAUX-->
-			</article>
+			<?php while (have_posts()) : the_post(); ?>
 
-			<!-- PAGINATION-->
+				<?php get_template_part('content'); ?>
+
+			<?php endwhile; ?>
+
+				<?php // Navigation ?>
+
+			<?php else : ?>
+
+				<?php // No Posts Found ?>
+
+		<?php endif; ?>
+
+
+
+			<p>
+				PAGINATION
+			</p><!-- PAGINATION-->
 		</section>
 	</main>
 <?php get_footer();

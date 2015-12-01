@@ -23,7 +23,7 @@
 			<p><a>Mentions légales</a> - Les Trophées de l’eau 2011 - Réalisation : Maetva Planet</p>
 		</section>
 	</section>
-	<?php wp_footer(); ?>
 </footer>
+	<?php wp_footer(); ?>
 </body>
 </html>
